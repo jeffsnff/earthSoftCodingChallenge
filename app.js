@@ -30,8 +30,8 @@ function howManyLetters(){
   }
 
   // creates a list item then appends to result ul
-  for(const [key, value ] of Object.entries(letterCount)){
-    listItem = document.createElement('li')
+  for(const [key, value ] of Object.entries(letterCount).sort()){
+    listItem = document.createElement('div')
     listItem.innerHTML =  key + ' : ' + ' ' + value
     document.getElementById('result').appendChild(listItem)
   }  

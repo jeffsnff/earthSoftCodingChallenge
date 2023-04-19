@@ -10,16 +10,21 @@
   <body>
   
     <div class="container">
-      <h1 id="main-heading">Favorite Moview Franchise</h1>
-      <input id="userInput" type="text">
-      <button onclick="howManyLetters()">Click Here</button>
+      <div class="userInputContainer">
+        <h1 id="main-heading">How many letters!?</h1>
+        <!-- <input id="userInput" type="text"> -->
+        <textarea id="userInput" rows="4" cols="50" placeholder="Type here..."></textarea><br>
+        <button onclick="howManyLetters()">Click Here</button>
+      </div>
+
+      <div class="resultContainer">
+        <h1>Result</h1>
+        <div id="result">
+          
+        </div>
+      </div>
     </div>
-    <div>
-      <h1>Result</h1>
-      <ul id="result">
-        
-      </ul>
-    </div>
+    
 
     <script src="app.js"></script> 
   </body>

@@ -9,31 +9,31 @@ function howManyLetters(){
   }
 
   // Grabs user input from page and forces it to lower case
-  let userInput = document.getElementById('userInput').value.toLowerCase()
+  let userInput = document.getElementById('userInput').value.toLowerCase();
 
   // letters we will be testing against
-  const alphabet = 'abcdefghijklmnopqurstuvwxyz'
+  const alphabet = 'abcdefghijklmnopqurstuvwxyz';
 
   //creats the object 
-  let letterCount = {}
+  let letterCount = {};
 
   // iterates user input over the alapabet string
   // then adds the letter in user input into the object
   for (let i = 0; i<userInput.length; i++){
     if (alphabet.includes(userInput[i])){
       if ( letterCount[userInput[i]]){
-        letterCount[userInput[i]]++
+        letterCount[userInput[i]]++;
       }else{
-        letterCount[userInput[i]] = 1
+        letterCount[userInput[i]] = 1;
       }
     }
   }
 
   // creates a list item then appends to result ul
   for(const [key, value ] of Object.entries(letterCount).sort()){
-    listItem = document.createElement('div')
-    listItem.innerHTML =  key + ' : ' + ' ' + value
-    document.getElementById('result').appendChild(listItem)
+    listItem = document.createElement('div');
+    listItem.innerHTML =  key + ' : ' + ' ' + value;
+    document.getElementById('result').appendChild(listItem);
   }  
 }
 
